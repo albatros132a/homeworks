@@ -12,6 +12,7 @@
 """
 
 class Plane(Vehicle):
+    cargo=1000
 
     def __init__(self,cargo,max_cargo):
         super().__init__(cargo,max_cargo)
@@ -26,6 +27,6 @@ class Plane(Vehicle):
             print(f'Cargo ever load Error !{error}')
 
     def remove_all_cargo(self):
-        return self.cargo=super().cargo
+        self.cargo=Plane.cargo
 
 
