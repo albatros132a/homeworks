@@ -1,14 +1,9 @@
-"""
-Объявите следующие исключения:
-- LowFuelError
-- NotEnoughFuel
-- CargoOverload
-"""
-Class LowFuelError(Exception):
-pass
 
-Class NotEnoughFuel(Exception):
-pass
+class LowFuelError(Exception):
+    pass
 
-Class CargoOverload(Exception):
-pass
+class NotEnoughFuel(Exception):
+    pass
+
+class CargoOverload(Exception):
+    pass

@@ -19,5 +19,13 @@ class Plane(Vehicle):
         self.cargo=cargo
 
     def load_cargo(self,cargo):
-        try: self.cargo<self.max_cargo
+        try:
+            if (self.cargo+cargo)<self.max_cargo:
+                self.cargo+=cargo
+        except exceptions.CargoOverload as error:
+            print(f'Cargo ever load Error !{error}')
+
+    def remove_all_cargo(self):
+        return self.cargo=super().cargo
+
 
