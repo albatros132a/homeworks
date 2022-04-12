@@ -1,5 +1,5 @@
 
-from HomeWork02 import exceptions
+from HomeWork02.exceptions import CargoOverload
 from HomeWork02.base import Vehicle
 
 def main():

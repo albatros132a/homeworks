@@ -1,7 +1,8 @@
-from HomeWork02 import exceptions
+from HomeWork02.exceptions import LowFuelError, NotEnoughFuel
 
 from abc import ABC
 def main():
+
     class Vehicle(ABC):
 
         weight = 2500
