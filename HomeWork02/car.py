@@ -2,7 +2,7 @@
 
 from base import Vehicle
 
-from engine import Engine
+from HomeWork02.engine import Engine
 
 class Car(Vehicle):
     pass
@@ -10,10 +10,8 @@ class Car(Vehicle):
     def __init__(self, engine):
         self.engine=engine
 
-    def set_engine(self):
-        car=Car()+Engine()
+    def set_engine(self,engine):
+        return self.engine
 
-"""
-объявите метод set_engine, который принимает в себя экземпляр объекта Engine и устанавливает на текущий экземпляр Car
-
-"""
+car=Car()
+car.set_engine()
