@@ -44,6 +44,7 @@ def main():
 
 try:
     main()
+    print(Vehicle.distance)
 except LowFuelError as e:
     print(f'Low fuel Error !{e}')
 except NotEnoughFuel as e:
