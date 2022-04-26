@@ -33,7 +33,6 @@ class Vehicle(ABC):
         else:
             raise NotEnoughFuel(self.fuel)
 
-
 def main():
     car_1 = Vehicle(2500, 100, 9.5)
     distance = 70

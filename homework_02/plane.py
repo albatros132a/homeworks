@@ -21,7 +21,6 @@ class Plane(Vehicle):
     def remove_all_cargo(self):
         self.cargo = self.default_cargo
 
-
 def main():
     plane=Plane(1000,3000)
 
