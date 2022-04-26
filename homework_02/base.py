@@ -4,7 +4,7 @@ from abc import ABC
 
 
 class Vehicle(ABC):
-    started = True
+    started = False
 
     def __init__(self, weight=2500, fuel=70, fuel_consumption=9.5):
         self.weigh = weight
@@ -26,7 +26,7 @@ class Vehicle(ABC):
 
     def move(self):
 
-        move_fuel = self.distance * fuel_consumption
+        move_fuel = self.distance * self.fuel_consumption
         if (self.fuel - move_fuel) > 0:
             self.fuel = (self.fuel - move_fuel)
 
