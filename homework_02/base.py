@@ -13,12 +13,11 @@ class Vehicle(ABC):
 
     def start(self):
         if self.started != True:
-            if check_fuel():
+            if self.check_fuel():
                 self.started= True
 
 
     def check_fuel(self):
-
         if self.fuel > 0:
             return True
         else:
