@@ -4,24 +4,22 @@ from homework_02.base import Vehicle
 
 
 class Plane(Vehicle):
-    default_cargo = 1000
-    cargo = 1000
-    max_cargo = 3000
+    default_cargo = 0
 
-    def __init__(self, cargo, max_cargo):
-      #  super().__init__()
+    def __init__(self, cargo = 1000, max_cargo = 3000):
+        super().__init__(cargo, max_cargo)
         self.max_cargo = max_cargo
         self.cargo = cargo
 
     def load_cargo(self, cargo):
-        try:
-            if (self.cargo + cargo) < self.max_cargo:
-                self.cargo += cargo
-        except CargoOverload as error:
-            print(f'Cargo ever load Error !{error}')
+        if (self.cargo + cargo) < self.max_cargo:
+            self.cargo += cargo
+        else:
+            raise CargoOverload(self.cargo)
 
     def remove_all_cargo(self):
         self.cargo = self.default_cargo
+        return self.cargo
 
 
 def main():

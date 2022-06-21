@@ -1,16 +1,14 @@
 
 
 from homework_02.base import Vehicle
+from homework_02.engine import Engine
 
 class Car(Vehicle):
-    pass
 
     def __init__(self, engine):
-     #   super().__init__())
         self.engine=engine
 
     def set_engine(self,engine):
-        return self.engine
-
-car=Car(2.0)
-car.set_engine(2.0)
+        engine = Engine(2.0,4)
+        car = Car(engine)
+        return car
